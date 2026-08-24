@@ -329,19 +329,39 @@ h2.title{
 }
 .party li:last-child{border-bottom:none}
 
+.role-icon{
+  width:58px;height:58px;margin:0 auto 16px;border-radius:50%;
+  border:1px solid rgba(176,137,72,.55);
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 32% 28%,#fffdf7,var(--ivory-2));
+  box-shadow:0 8px 18px -10px rgba(66,53,42,.35);
+}
+.role-icon svg{width:30px;height:30px;color:var(--gold)}
 .littles{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-  gap:20px;max-width:900px;margin:44px auto 0;
+  display:flex;flex-wrap:wrap;justify-content:center;gap:20px;
+  max-width:980px;margin:44px auto 0;
 }
 .little{
-  padding:28px 18px;text-align:center;
+  flex:1 1 210px;padding:30px 20px;text-align:center;
   border:1px dashed rgba(176,137,72,.5);border-radius:8px;background:#fffdf7;
 }
+.little.wide{flex:1.9 1 300px}
 .little .role{
   font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.3em;
   text-transform:uppercase;color:var(--gold);
 }
 .little .name{font-size:1.12rem;color:var(--deep);margin-top:10px;line-height:1.4}
+.fg-list{
+  list-style:none;margin-top:14px;
+  display:grid;grid-template-columns:1fr 1fr;gap:2px 26px;
+}
+@media(max-width:600px){.fg-list{grid-template-columns:1fr}}
+.fg-list li{
+  padding:9px 0;font-size:1.06rem;color:#4c3f32;
+  border-bottom:1px dotted rgba(176,137,72,.35);
+}
+.fg-list li:nth-last-child(-n+2){border-bottom:none}
+@media(max-width:600px){.fg-list li:last-child{border-bottom:none}}
 
 .pairs{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -564,10 +584,12 @@ footer .fine{
 
     <div class="head-duo">
       <div class="head-card reveal d1">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 27c-3.6-1.2-5.5-4-5.5-7.6C18.5 14.8 22 11 24 8c2 3 5.5 6.8 5.5 11.4 0 3.6-1.9 6.4-5.5 7.6Z"/><path d="M24 27v13"/><path d="M24 35c-3.4-.3-6-2.3-7-5.4"/><path d="M24 39c3.4-.3 6-2.3 7-5.4"/></svg></div>
         <div class="role">Maid of Honor</div>
         <div class="name">Maria Concepcion Abajon</div>
       </div>
       <div class="head-card reveal d2">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 19l11 5v6l-11-5zM38 19l-11 5v6l11-5z"/><rect x="21.5" y="21.5" width="5" height="6" rx="1.2"/><path d="M24 30v9m-3.5-4h7"/></svg></div>
         <div class="role">Best Man</div>
         <div class="name">Hermenio Escasinas</div>
       </div>
@@ -575,6 +597,7 @@ footer .fine{
 
     <div class="duo-cols">
       <div class="party reveal d1">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="15" r="4"/><circle cx="31" cy="15" r="4"/><circle cx="24" cy="9" r="4"/><path d="M20 18.5L24 26l4-7.5"/><path d="M24 26v16"/><path d="M19 30h10l-2.5 12h-5Z"/></svg></div>
         <h4>Bridesmaids</h4>
         <ul>
           <li>Jessica Legaspi</li>
@@ -585,6 +608,7 @@ footer .fine{
         </ul>
       </div>
       <div class="party reveal d2">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 19l11 5v6l-11-5zM38 19l-11 5v6l11-5z"/><rect x="21.5" y="21.5" width="5" height="6" rx="1.2"/></svg></div>
         <h4>Groomsmen</h4>
         <ul>
           <li>Mark Gil Jacinto</li>
@@ -598,45 +622,45 @@ footer .fine{
 
     <div class="littles">
       <div class="little reveal d1">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="19.5" cy="28" r="8"/><circle cx="28.5" cy="24" r="8"/><path d="M28.5 12l3 4-3 4-3-4Z"/></svg></div>
         <div class="role">Ring Bearer</div>
         <div class="name">Micko Solomon</div>
       </div>
-      <div class="little reveal d2">
-        <div class="role">Bible Bearer</div>
-        <div class="name">Cloud Nicolai L. Cruz</div>
+      <div class="little wide reveal d2">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8c2.6 2.7 2.6 7 0 9.5C21.4 15 21.4 10.7 24 8Z" transform="rotate(0 24 24)"/><path d="M24 8c2.6 2.7 2.6 7 0 9.5C21.4 15 21.4 10.7 24 8Z" transform="rotate(72 24 24)"/><path d="M24 8c2.6 2.7 2.6 7 0 9.5C21.4 15 21.4 10.7 24 8Z" transform="rotate(144 24 24)"/><path d="M24 8c2.6 2.7 2.6 7 0 9.5C21.4 15 21.4 10.7 24 8Z" transform="rotate(216 24 24)"/><path d="M24 8c2.6 2.7 2.6 7 0 9.5C21.4 15 21.4 10.7 24 8Z" transform="rotate(288 24 24)"/><circle cx="24" cy="25.5" r="2.6"/></svg></div>
+        <div class="role">Flower Girls</div>
+        <ul class="fg-list">
+          <li>Franzyska Hiraya Tanguilig</li>
+          <li>Adriana Noe Aguilar</li>
+          <li>Gillian Eleuise L. Jacinto</li>
+          <li>Ma. Zcyna Mingua</li>
+        </ul>
       </div>
       <div class="little reveal d3">
-        <div class="role">Flower Girl</div>
-        <div class="name">Franzyska Hiraya Tanguilig</div>
-      </div>
-      <div class="little reveal d4">
-        <div class="role">Flower Girl</div>
-        <div class="name">Adriana Noe Aguilar</div>
-      </div>
-      <div class="little reveal d5">
-        <div class="role">Flower Girl</div>
-        <div class="name">Gillian Eleuise L. Jacinto</div>
-      </div>
-      <div class="little reveal d5">
-        <div class="role">Flower Girl</div>
-        <div class="name">Ma. Zcyna Mingua</div>
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5v7M20.8 8h6.4"/><path d="M9 16c5-2 10.5-2 15 1 4.5-3 10-3 15-1v23c-5-2-10.5-2-15 1-4.5-3-10-3-15-1Z"/><path d="M24 17v23"/></svg></div>
+        <div class="role">Bible Bearer</div>
+        <div class="name">Cloud Nicolai L. Cruz</div>
       </div>
     </div>
 
     <div class="pairs">
       <div class="pair reveal d1">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8c-3.5 10-3.5 20 .5 30"/><path d="M32 8c3.5 10 3.5 20-.5 30"/><path d="M16 8q8 4.5 16 0"/><path d="M17 38q7 4 14 0"/></svg></div>
         <h4>Veil Sponsors</h4>
         <p>Mark Anthony Karl Mariano<br>&amp; Maria Ferlita Mariano</p>
       </div>
       <div class="pair reveal d2">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 26c-2.8-5.6-11-5.6-11 0 0 5.6 8.2 5.6 11 0 2.8-5.6 11-5.6 11 0 0 5.6-8.2 5.6-11 0Z"/><path d="M13 22l-2.5-2.5M35 22l2.5-2.5"/></svg></div>
         <h4>Cord Sponsors</h4>
         <p>Francis Tanguilig<br>&amp; Isabel Tanguilig</p>
       </div>
       <div class="pair reveal d3">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="19" y="18" width="10" height="21" rx="2"/><path d="M24 7c2.6 3.1 3.4 5.3 3.4 7a3.4 3.4 0 1 1-6.8 0c0-1.7.8-3.9 3.4-7Z"/><path d="M15 39h18"/></svg></div>
         <h4>Candle Sponsors</h4>
         <p>Ariane Leu Legaspi<br>&amp; Mark Gil Jacinto</p>
       </div>
       <div class="pair reveal d4">
+        <div class="role-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="31" width="20" height="7" rx="3.5"/><rect x="17" y="23" width="20" height="7" rx="3.5"/><ellipse cx="24" cy="14" rx="6" ry="2.6"/><path d="M38 9.5l1.2 2.3 2.3 1.2-2.3 1.2-1.2 2.3-1.2-2.3-2.3-1.2 2.3-1.2Z"/></svg></div>
         <h4>Coin Sponsors</h4>
         <p>Adrian Aguilar<br>&amp; Candy Morelos</p>
       </div>
