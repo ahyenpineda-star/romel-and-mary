@@ -294,6 +294,35 @@ h2.title{
 }
 .kindness{max-width:560px;margin:30px auto 0;text-align:center;font-style:italic;color:#6d5c49}
 
+.gallery{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:38px 30px;margin-top:60px;align-items:start;
+}
+.g-item{position:relative;transition:transform .7s cubic-bezier(.19,1,.22,1)}
+.g-item:nth-child(odd){transform:rotate(-1.4deg)}
+.g-item:nth-child(even){transform:rotate(1.4deg) translateY(34px)}
+.g-item:hover{transform:rotate(0deg) translateY(-6px)}
+@media(max-width:640px){.g-item:nth-child(even){transform:rotate(1deg)} .g-item:nth-child(odd){transform:rotate(-1deg)}}
+.g-frame{
+  position:relative;padding:10px 10px 12px;background:#fffdf7;
+  border:1px solid rgba(176,137,72,.55);
+  border-radius:170px 170px 10px 10px;
+  box-shadow:0 32px 64px -34px rgba(66,53,42,.5);
+}
+.g-frame::before{
+  content:"";position:absolute;inset:-9px;z-index:-1;
+  border:1px solid rgba(176,137,72,.3);border-radius:180px 180px 14px 14px;
+}
+.g-frame img{
+  display:block;width:100%;aspect-ratio:3/4;object-fit:cover;
+  border-radius:160px 160px 6px 6px;
+  filter:sepia(.24) saturate(.9) brightness(1.03);
+  transition:filter .9s ease,transform .9s ease;
+}
+.g-item:hover img{filter:none;transform:scale(1.035)}
+.g-cap{
+  margin-top:16px;text-align:center;font-size:1.5rem;color:var(--terra);
+}
 .head-duo{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:26px;max-width:720px;margin:52px auto 0;
@@ -522,9 +551,34 @@ footer .fine{
   </div>
 </section>
 
+<section class="block center" id="gallery" style="background:linear-gradient(180deg,#f2e8d5,var(--ivory))">
+  <div class="wrap">
+    <span class="numeral reveal">III · Captured Moments</span>
+    <h2 class="title script reveal d1" style="font-weight:400">Our love in frames</h2>
+    <div class="gallery">
+      <figure class="g-item reveal d1">
+        <div class="g-frame"><img src="photos/couple-1.jpg" alt="Romel and Mary" loading="lazy"></div>
+        <figcaption class="g-cap script">where it began</figcaption>
+      </figure>
+      <figure class="g-item reveal d2">
+        <div class="g-frame"><img src="photos/couple-2.jpg" alt="Romel and Mary" loading="lazy"></div>
+        <figcaption class="g-cap script">through the years</figcaption>
+      </figure>
+      <figure class="g-item reveal d3">
+        <div class="g-frame"><img src="photos/couple-3.jpg" alt="Romel and Mary" loading="lazy"></div>
+        <figcaption class="g-cap script">always us</figcaption>
+      </figure>
+      <figure class="g-item reveal d4">
+        <div class="g-frame"><img src="photos/couple-4.jpg" alt="Romel and Mary" loading="lazy"></div>
+        <figcaption class="g-cap script">to forever</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section class="block center" id="details">
   <div class="wrap">
-    <span class="numeral reveal">III · The Wedding Day</span>
+    <span class="numeral reveal">IV · The Wedding Day</span>
     <h2 class="title script reveal d1" style="font-weight:400">Ceremony &amp; Reception</h2>
     <div class="cards">
       <div class="card reveal d1">
@@ -555,7 +609,7 @@ footer .fine{
 
 <section class="block center" style="background:linear-gradient(180deg,#f2e8d5,var(--ivory))">
   <div class="wrap">
-    <span class="numeral reveal">IV · Attire &amp; Reminders</span>
+    <span class="numeral reveal">V · Attire &amp; Reminders</span>
     <h2 class="title script reveal d1" style="font-weight:400">Dress in earth tones</h2>
     <p class="sub reveal d2">We kindly request earth-tone colors, except shades of green.</p>
     <div class="swatches reveal d3">
@@ -579,7 +633,7 @@ footer .fine{
 
 <section class="block center" style="background:linear-gradient(180deg,var(--ivory),#f2e8d5)">
   <div class="wrap">
-    <span class="numeral reveal">V · The Entourage</span>
+    <span class="numeral reveal">VI · The Entourage</span>
     <h2 class="title script reveal d1" style="font-weight:400">With their families</h2>
 
     <div class="head-duo">
@@ -670,7 +724,7 @@ footer .fine{
 
 <section class="block center">
   <div class="wrap">
-    <span class="numeral reveal">VI · Principal Sponsors</span>
+    <span class="numeral reveal">VII · Principal Sponsors</span>
     <h2 class="title script reveal d1" style="font-weight:400">Our Ninongs &amp; Ninangs</h2>
     <p class="sub reveal d2">To stand as witnesses to our marriage</p>
     <div class="sponsors reveal d3">
