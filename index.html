@@ -471,6 +471,27 @@ footer .fine{
   margin-top:40px;font-family:'Jost',sans-serif;font-size:.6rem;letter-spacing:.3em;
   text-transform:uppercase;color:#8d7f63;
 }
+
+.music-toggle{
+  position:fixed;
+  bottom:24px;right:24px;z-index:100;
+  width:48px;height:48px;border-radius:50%;
+  border:1px solid rgba(176,137,72,.45);
+  background:rgba(248,242,231,.92);
+  backdrop-filter:blur(8px);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;color:var(--terra);
+  transition:background .3s,transform .3s;
+  box-shadow:0 2px 16px rgba(66,53,42,.12);
+}
+.music-toggle:hover{background:#fffdf7;transform:scale(1.08)}
+.music-toggle.playing::after{
+  content:'';position:absolute;inset:-4px;border-radius:50%;
+  border:2px solid rgba(176,106,76,.2);
+  animation:pulse 2s ease infinite;
+}
+@keyframes pulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
 </style>
 </head>
 <body>
@@ -756,6 +777,9 @@ footer .fine{
   <p class="fine reveal d4">Sunday · October 18, 2026 · 2:30 PM · Ysabel's Garden</p>
 </footer>
 
+<audio id="bgMusic" src="music.webm" loop preload="auto"></audio>
+<button class="music-toggle" id="musicToggle" aria-label="Toggle music">&#9835;</button>
+
 <script>
 const target = new Date(2026, 9, 18, 14, 30, 0);
 const $ = id => document.getElementById(id);
@@ -793,6 +817,31 @@ for(let i=0;i<16;i++){
   p.style.animationDelay = (-Math.random()*18) + 's, ' + (-Math.random()*3) + 's';
   petalsBox.appendChild(p);
 }
+
+const music = document.getElementById('bgMusic');
+const toggle = document.getElementById('musicToggle');
+music.volume = 0.4;
+
+function markPlaying(){
+  toggle.classList.add('playing');
+  toggle.innerHTML = '&#9836;';
+}
+function tryPlay(attempts){
+  music.play().then(markPlaying).catch(function(){
+    if(attempts > 0) setTimeout(function(){ tryPlay(attempts-1); }, 200);
+  });
+}
+
+toggle.addEventListener('click', function(e){
+  e.stopPropagation();
+  if(music.paused){
+    tryPlay(5);
+  } else {
+    music.pause();
+    toggle.classList.remove('playing');
+    toggle.innerHTML = '&#9835;';
+  }
+});
 </script>
 </body>
 </html>
