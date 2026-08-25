@@ -19,8 +19,10 @@
   --gold:#b08948;
   --gold-soft:#d3b47e;
   --bronze:#9a7a54;
-  --sage:#7a8a6a;
-  --sage-soft:#9aa88c;
+  --sage:#6b7c5a;
+  --sage-soft:#8a9a78;
+  --sage-light:rgba(107,124,90,.12);
+  --sage-tint:rgba(138,154,120,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -95,7 +97,7 @@ body::before{
   background:
     radial-gradient(1200px 600px at 15% -10%, #fdf8ee 0%, transparent 60%),
     radial-gradient(900px 700px at 110% 110%, #efe2c9 0%, transparent 55%),
-    radial-gradient(600px 400px at 50% 100%, rgba(122,138,106,.06) 0%, transparent 70%),
+    radial-gradient(800px 500px at 50% 100%, rgba(107,124,90,.12) 0%, transparent 70%),
     var(--ivory);
 }
 .arch{
@@ -169,13 +171,13 @@ body::before{
 @media(max-width:720px){.leaf svg{width:130px;height:auto}}
 
 .band{
-  background:linear-gradient(180deg,#efe3cc,var(--sand));
+  background:linear-gradient(180deg,rgba(138,154,120,.08),var(--sand),rgba(138,154,120,.08));
   color:var(--deep);
   text-align:center;
   padding:74px 24px;
   position:relative;
-  border-top:1px solid rgba(122,138,106,.15);
-  border-bottom:1px solid rgba(122,138,106,.15);
+  border-top:1px solid rgba(107,124,90,.2);
+  border-bottom:1px solid rgba(107,124,90,.2);
 }
 .band .verse{
   max-width:760px;margin:0 auto;
@@ -209,9 +211,9 @@ h2.title{
 .count{
   min-width:104px;padding:26px 12px 20px;
   border:1px solid var(--sage-soft);
-  background:linear-gradient(180deg,#fffdf7,var(--ivory-2));
+  background:linear-gradient(180deg,#fffdf7,rgba(138,154,120,.06),var(--ivory-2));
   border-radius:4px;
-  box-shadow:0 18px 40px -22px rgba(66,53,42,.35), 0 0 20px rgba(122,138,106,.06);
+  box-shadow:0 18px 40px -22px rgba(66,53,42,.35), 0 0 24px rgba(107,124,90,.08);
   position:relative;
 }
 .count::before{
@@ -247,14 +249,14 @@ h2.title{
 }
 .card{
   padding:44px 30px 40px;text-align:center;
-  background:linear-gradient(180deg,#fffdf7,var(--ivory-2));
+  background:linear-gradient(180deg,#fffdf7,rgba(138,154,120,.05),var(--ivory-2));
   border:1px solid var(--sage-soft);
   border-radius:6px;
-  box-shadow:0 24px 50px -28px rgba(66,53,42,.35), 0 0 24px rgba(122,138,106,.06);
+  box-shadow:0 24px 50px -28px rgba(66,53,42,.35), 0 0 28px rgba(107,124,90,.08);
   transition:transform .5s cubic-bezier(.19,1,.22,1),box-shadow .5s;
   position:relative;
 }
-.card:hover{transform:translateY(-8px);box-shadow:0 34px 60px -28px rgba(66,53,42,.45), 0 0 30px rgba(122,138,106,.1)}
+.card:hover{transform:translateY(-8px);box-shadow:0 34px 60px -28px rgba(66,53,42,.45), 0 0 36px rgba(107,124,90,.12)}
 .card .icon{width:46px;height:46px;margin:0 auto 18px;color:var(--sage)}
 .card h3{
   font-family:'Jost',sans-serif;font-weight:400;
@@ -295,7 +297,7 @@ h2.title{
 .rule{
   font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
   color:var(--deep);border:1px solid var(--sage-soft);border-radius:999px;padding:12px 22px;
-  background:linear-gradient(135deg,#fffdf7,rgba(122,138,106,.04));
+  background:linear-gradient(135deg,#fffdf7,rgba(138,154,120,.08),#fffdf7);
 }
 .kindness{max-width:560px;margin:30px auto 0;text-align:center;font-style:italic;color:#6d5c49}
 
@@ -309,14 +311,14 @@ h2.title{
 .g-item:hover{transform:rotate(0deg) translateY(-6px)}
 @media(max-width:640px){.g-item:nth-child(even){transform:rotate(1deg)} .g-item:nth-child(odd){transform:rotate(-1deg)}}
 .g-frame{
-  position:relative;padding:10px 10px 12px;background:#fffdf7;
+  position:relative;padding:10px 10px 12px;background:linear-gradient(180deg,#fffdf7,rgba(138,154,120,.04));
   border:1px solid var(--sage-soft);
   border-radius:170px 170px 10px 10px;
-  box-shadow:0 32px 64px -34px rgba(66,53,42,.5), 0 0 24px rgba(122,138,106,.08);
+  box-shadow:0 32px 64px -34px rgba(66,53,42,.5), 0 0 28px rgba(107,124,90,.1);
 }
 .g-frame::before{
   content:"";position:absolute;inset:-9px;z-index:-1;
-  border:1px solid rgba(122,138,106,.22);border-radius:180px 180px 14px 14px;
+  border:1px solid rgba(107,124,90,.28);border-radius:180px 180px 14px 14px;
 }
 .g-frame img{
   display:block;width:100%;aspect-ratio:3/4;object-fit:cover;
@@ -334,9 +336,9 @@ h2.title{
 }
 .head-card{
   padding:38px 26px;text-align:center;
-  background:linear-gradient(180deg,#fffdf7,var(--ivory-2));
+  background:linear-gradient(180deg,#fffdf7,rgba(138,154,120,.05),var(--ivory-2));
   border:1px solid var(--sage-soft);border-radius:6px;
-  box-shadow:0 22px 46px -26px rgba(66,53,42,.4), 0 0 20px rgba(122,138,106,.06);
+  box-shadow:0 22px 46px -26px rgba(66,53,42,.4), 0 0 24px rgba(107,124,90,.08);
 }
 .head-card .role{
   font-family:'Jost',sans-serif;font-size:.66rem;letter-spacing:.34em;
@@ -350,7 +352,8 @@ h2.title{
 @media(max-width:680px){.duo-cols{grid-template-columns:1fr}}
 .party{
   padding:36px 28px;text-align:center;
-  border:1px solid var(--sage-soft);border-radius:6px;background:rgba(255,253,247,.6);
+  border:1px solid var(--sage-soft);border-radius:6px;
+  background:linear-gradient(180deg,rgba(255,253,247,.8),rgba(138,154,120,.04),rgba(255,253,247,.6));
 }
 .party h4{
   font-family:'Jost',sans-serif;font-weight:400;font-size:.74rem;
@@ -377,7 +380,8 @@ h2.title{
 }
 .little{
   flex:1 1 210px;padding:30px 20px;text-align:center;
-  border:1px dashed var(--sage-soft);border-radius:8px;background:#fffdf7;
+  border:1px dashed var(--sage-soft);border-radius:8px;
+  background:linear-gradient(180deg,#fffdf7,rgba(138,154,120,.04),#fffdf7);
 }
 .little.wide{flex:1.9 1 300px}
 .little .role{
@@ -403,9 +407,9 @@ h2.title{
 }
 .pair{
   padding:30px 22px;text-align:center;
-  background:linear-gradient(180deg,#fffdf7,var(--ivory-2));
+  background:linear-gradient(180deg,#fffdf7,rgba(138,154,120,.05),var(--ivory-2));
   border:1px solid var(--sage-soft);border-radius:6px;
-  box-shadow:0 16px 36px -22px rgba(66,53,42,.35), 0 0 16px rgba(122,138,106,.06);
+  box-shadow:0 16px 36px -22px rgba(66,53,42,.35), 0 0 20px rgba(107,124,90,.08);
 }
 .pair h4{
   font-family:'Jost',sans-serif;font-weight:400;font-size:.68rem;
@@ -430,10 +434,10 @@ h2.title{
   max-width:680px;margin:0 auto;
   padding:clamp(40px,7vw,64px);
   background:
-    radial-gradient(120% 100% at 50% 0%,#fffdf7,var(--ivory-2));
+    radial-gradient(120% 100% at 50% 0%,#fffdf7,rgba(138,154,120,.04),var(--ivory-2));
   border:1px solid var(--sage-soft);
   border-radius:8px;
-  box-shadow:0 30px 70px -30px rgba(66,53,42,.4), 0 0 30px rgba(122,138,106,.08);
+  box-shadow:0 30px 70px -30px rgba(66,53,42,.4), 0 0 36px rgba(107,124,90,.1);
   text-align:center;
   position:relative;
 }
@@ -447,7 +451,7 @@ h2.title{
 }
 
 footer{
-  background:var(--deep);color:#e8dcc4;
+  background:linear-gradient(180deg,var(--deep),rgba(45,55,40,1));color:#e8dcc4;
   text-align:center;padding:80px 24px 46px;
   position:relative;overflow:hidden;
 }
@@ -568,7 +572,7 @@ footer .fine{
   </div>
 </section>
 
-<section class="block story center" style="background:linear-gradient(180deg,var(--ivory),#f2e8d5)">
+<section class="block story center" style="background:linear-gradient(180deg,var(--ivory),#f2e8d5,rgba(138,154,120,.06))">
   <div class="wrap">
     <span class="numeral reveal">II · Our Story</span>
     <h2 class="title script reveal d1" style="font-weight:400">A note from the couple</h2>
@@ -577,7 +581,7 @@ footer .fine{
   </div>
 </section>
 
-<section class="block center" id="gallery" style="background:linear-gradient(180deg,#f2e8d5,var(--ivory))">
+<section class="block center" id="gallery" style="background:linear-gradient(180deg,rgba(138,154,120,.06),#f2e8d5,var(--ivory))">
   <div class="wrap">
     <span class="numeral reveal">III · Captured Moments</span>
     <h2 class="title script reveal d1" style="font-weight:400">Our love in frames</h2>
@@ -633,7 +637,7 @@ footer .fine{
   </div>
 </section>
 
-<section class="block center" style="background:linear-gradient(180deg,#f2e8d5,var(--ivory))">
+<section class="block center" style="background:linear-gradient(180deg,#f2e8d5,rgba(138,154,120,.05),var(--ivory))">
   <div class="wrap">
     <span class="numeral reveal">V · Attire &amp; Reminders</span>
     <h2 class="title script reveal d1" style="font-weight:400">Dress in earth tones</h2>
@@ -683,7 +687,7 @@ footer .fine{
   </div>
 </section>
 
-<section class="block center" style="background:linear-gradient(180deg,var(--ivory),#f2e8d5)">
+<section class="block center" style="background:linear-gradient(180deg,var(--ivory),rgba(138,154,120,.05),#f2e8d5)">
   <div class="wrap">
     <span class="numeral reveal">VII · The Entourage</span>
 
