@@ -91,6 +91,17 @@ body::before{
 @keyframes fall{to{transform:translateY(112vh)}}
 @keyframes sway{from{margin-left:-18px}to{margin-left:18px}}
 
+.bells-container{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.bell{
+  position:absolute;top:-40px;
+  font-size:20px;
+  animation:bellFall linear infinite, bellSway ease-in-out infinite alternate;
+  will-change:transform;
+  opacity:.7;
+}
+@keyframes bellFall{to{transform:translateY(calc(100% + 80px))}}
+@keyframes bellSway{from{margin-left:-20px}to{margin-left:20px}}
+
 .hero{
   min-height:100svh;
   display:flex;
@@ -561,6 +572,7 @@ footer .fine{
 </div>
 
 <section class="block center" id="countdown" style="background:linear-gradient(180deg,rgba(138,149,116,.08),rgba(151,162,133,.06),rgba(138,149,116,.08))">
+  <div class="bells-container" id="bellsContainer"></div>
   <div class="wrap">
     <span class="numeral reveal">I · The Countdown</span>
     <h2 class="title script reveal d1" style="font-weight:400">Counting down to forever</h2>
@@ -833,6 +845,20 @@ for(let i=0;i<16;i++){
   p.style.animationDuration = (9 + Math.random()*10) + 's, ' + (2.5 + Math.random()*2.5) + 's';
   p.style.animationDelay = (-Math.random()*18) + 's, ' + (-Math.random()*3) + 's';
   petalsBox.appendChild(p);
+}
+
+const bellsContainer = $('bellsContainer');
+const bellEmojis = ['🔔','⭐'];
+for(let i=0;i<12;i++){
+  const b = document.createElement('span');
+  b.className = 'bell';
+  b.textContent = bellEmojis[i % bellEmojis.length];
+  b.style.left = Math.random()*100 + '%';
+  b.style.fontSize = (14 + Math.random()*10) + 'px';
+  b.style.animationDuration = (12 + Math.random()*15) + 's, ' + (3 + Math.random()*3) + 's';
+  b.style.animationDelay = (-Math.random()*20) + 's, ' + (-Math.random()*3) + 's';
+  b.style.color = '#d4af37';
+  bellsContainer.appendChild(b);
 }
 
 const music = document.getElementById('bgMusic');
