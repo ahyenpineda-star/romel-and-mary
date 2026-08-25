@@ -91,6 +91,19 @@ body::before{
 @keyframes fall{to{transform:translateY(112vh)}}
 @keyframes sway{from{margin-left:-18px}to{margin-left:18px}}
 
+.bell-flower{
+  position:absolute;
+  opacity:.15;
+  pointer-events:none;
+}
+.bell-flower svg{
+  width:100%;
+  height:100%;
+}
+.bell-flower.yellow{
+  filter:drop-shadow(0 2px 4px rgba(212,175,55,.3));
+}
+
 .hero{
   min-height:100svh;
   display:flex;
@@ -561,6 +574,25 @@ footer .fine{
 </div>
 
 <section class="block center" id="countdown" style="background:linear-gradient(180deg,rgba(138,149,116,.08),rgba(151,162,133,.06),rgba(138,149,116,.08))">
+  <div class="bell-flower yellow" style="top:20px;left:20px;width:60px;height:80px">
+    <svg viewBox="0 0 100 140" fill="none">
+      <path d="M50 10 C30 10 15 30 15 60 C15 90 35 120 50 130 C65 120 85 90 85 60 C85 30 70 10 50 10Z" fill="#d4af37" opacity=".6"/>
+      <path d="M50 10 C40 10 25 25 25 55 C25 80 40 110 50 125" stroke="#b8960c" stroke-width="2" fill="none"/>
+      <path d="M50 10 C60 10 75 25 75 55 C75 80 60 110 50 125" stroke="#b8960c" stroke-width="2" fill="none"/>
+      <ellipse cx="50" cy="130" rx="8" ry="5" fill="#2d5a3d"/>
+      <path d="M50 130 L50 140" stroke="#2d5a3d" stroke-width="3"/>
+      <path d="M42 135 Q50 145 58 135" stroke="#2d5a3d" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+  <div class="bell-flower yellow" style="bottom:20px;right:20px;width:50px;height:70px;transform:rotate(15deg)">
+    <svg viewBox="0 0 100 140" fill="none">
+      <path d="M50 10 C30 10 15 30 15 60 C15 90 35 120 50 130 C65 120 85 90 85 60 C85 30 70 10 50 10Z" fill="#d4af37" opacity=".5"/>
+      <path d="M50 10 C40 10 25 25 25 55 C25 80 40 110 50 125" stroke="#b8960c" stroke-width="2" fill="none"/>
+      <path d="M50 10 C60 10 75 25 75 55 C75 80 60 110 50 125" stroke="#b8960c" stroke-width="2" fill="none"/>
+      <ellipse cx="50" cy="130" rx="8" ry="5" fill="#2d5a3d"/>
+      <path d="M50 130 L50 140" stroke="#2d5a3d" stroke-width="3"/>
+    </svg>
+  </div>
   <div class="wrap">
     <span class="numeral reveal">I · The Countdown</span>
     <h2 class="title script reveal d1" style="font-weight:400">Counting down to forever</h2>
@@ -694,6 +726,25 @@ footer .fine{
 </section>
 
 <section class="block center" style="background:linear-gradient(180deg,rgba(138,149,116,.08),rgba(151,162,133,.06),rgba(138,149,116,.08))">
+  <div class="bell-flower yellow" style="top:30px;right:30px;width:55px;height:75px;transform:rotate(-10deg)">
+    <svg viewBox="0 0 100 140" fill="none">
+      <path d="M50 10 C30 10 15 30 15 60 C15 90 35 120 50 130 C65 120 85 90 85 60 C85 30 70 10 50 10Z" fill="#d4af37" opacity=".55"/>
+      <path d="M50 10 C40 10 25 25 25 55 C25 80 40 110 50 125" stroke="#b8960c" stroke-width="2" fill="none"/>
+      <path d="M50 10 C60 10 75 25 75 55 C75 80 60 110 50 125" stroke="#b8960c" stroke-width="2" fill="none"/>
+      <ellipse cx="50" cy="130" rx="8" ry="5" fill="#2d5a3d"/>
+      <path d="M50 130 L50 140" stroke="#2d5a3d" stroke-width="3"/>
+    </svg>
+  </div>
+  <div class="bell-flower yellow" style="bottom:30px;left:30px;width:45px;height:65px;transform:rotate(20deg)">
+    <svg viewBox="0 0 100 140" fill="none">
+      <path d="M50 10 C30 10 15 30 15 60 C15 90 35 120 50 130 C65 120 85 90 85 60 C85 30 70 10 50 10Z" fill="#d4af37" opacity=".5"/>
+      <path d="M50 10 C40 10 25 25 25 55 C25 80 40 110 50 125" stroke="#b8960c" stroke-width="2" fill="none"/>
+      <path d="M50 10 C60 10 75 25 75 55 C75 80 60 110 50 125" stroke="#b8960c" stroke-width="2" fill="none"/>
+      <ellipse cx="50" cy="130" rx="8" ry="5" fill="#2d5a3d"/>
+      <path d="M50 130 L50 140" stroke="#2d5a3d" stroke-width="3"/>
+      <path d="M42 135 Q50 145 58 135" stroke="#2d5a3d" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
   <div class="wrap">
     <span class="numeral reveal">VII · The Entourage</span>
     <h2 class="title script reveal d1" style="font-weight:400">Our Family &amp; Friends</h2>
