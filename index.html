@@ -845,8 +845,10 @@ footer .fine{
   <p class="fine reveal d4">Sunday · October 18, 2026 · 2:30 PM · Ysabel's Garden</p>
 </footer>
 
-<audio id="bgMusic" src="music.webm" loop preload="auto"></audio>
+<div id="ytPlayer" style="position:absolute;width:0;height:0;overflow:hidden"></div>
 <button class="music-toggle" id="musicToggle" aria-label="Toggle music">&#9835;</button>
+
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
 const target = new Date(2026, 9, 18, 14, 30, 0);
@@ -886,28 +888,47 @@ for(let i=0;i<16;i++){
   petalsBox.appendChild(p);
 }
 
-const music = document.getElementById('bgMusic');
 const toggle = document.getElementById('musicToggle');
-music.volume = 0.4;
+let ytPlayer = null;
+let ytReady = false;
+
+function onYouTubeIframeAPIReady(){
+  ytPlayer = new YT.Player('ytPlayer', {
+    videoId: 'dy9ctah81U4',
+    playerVars: { autoplay: 0, loop: 1, playlist: 'dy9ctah81U4', controls: 0, modestbranding: 1, rel: 0 },
+    events: {
+      onReady: function(e){
+        ytReady = true;
+        e.target.setVolume(40);
+        tryPlay(5);
+      }
+    }
+  });
+}
 
 function markPlaying(){
   toggle.classList.add('playing');
   toggle.innerHTML = '&#9836;';
 }
 function tryPlay(attempts){
-  music.play().then(markPlaying).catch(function(){
-    if(attempts > 0) setTimeout(function(){ tryPlay(attempts-1); }, 200);
-  });
+  if(ytReady && ytPlayer && ytPlayer.playVideo){
+    ytPlayer.playVideo();
+    markPlaying();
+  } else if(attempts > 0){
+    setTimeout(function(){ tryPlay(attempts-1); }, 500);
+  }
 }
 
 toggle.addEventListener('click', function(e){
   e.stopPropagation();
-  if(music.paused){
-    tryPlay(5);
-  } else {
-    music.pause();
+  if(!ytReady || !ytPlayer) return;
+  if(ytPlayer.getPlayerState() === YT.PlayerState.PLAYING){
+    ytPlayer.pauseVideo();
     toggle.classList.remove('playing');
     toggle.innerHTML = '&#9835;';
+  } else {
+    ytPlayer.playVideo();
+    markPlaying();
   }
 });
 
