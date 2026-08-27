@@ -401,10 +401,9 @@ h2.title{
   transform:rotate(2deg) translateY(-4px);
 }
 .collage-side{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
+  position:relative;
+  width:100%;
+  height:100%;
 }
 .collage-side .collage-bg{
   position:absolute;
@@ -417,20 +416,32 @@ h2.title{
   z-index:0;
 }
 .collage-side .collage-img{
-  position:relative;
-  width:48%;
-  top:auto;left:auto;bottom:auto;right:auto;
-  transform:rotate(-2deg);
+  position:absolute;
+  top:0;
+  height:100%;
+  object-fit:cover;
+  transform:rotate(0deg);
   z-index:1;
+  transition:filter .8s ease, transform .8s ease;
+}
+.collage-side .collage-img:nth-child(2){
+  left:0;
+  width:52%;
+  clip-path:polygon(0 0, 100% 0, 88% 100%, 0 100%);
 }
 .collage-side .collage-img:nth-child(3){
-  transform:rotate(2deg);
+  right:0;
+  width:56%;
+  clip-path:polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.collage-side:hover .collage-img{
+  filter:none;
 }
 .collage-side:hover .collage-img:nth-child(2){
-  transform:rotate(0deg) translateY(-4px);
+  transform:translateX(-4px);
 }
 .collage-side:hover .collage-img:nth-child(3){
-  transform:rotate(0deg) translateY(-4px);
+  transform:translateX(4px);
 }
 .collage-frame{
   position:relative;
