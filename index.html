@@ -400,6 +400,30 @@ h2.title{
 .collage-wrap:hover .collage-img:nth-child(3){
   transform:rotate(2deg) translateY(-4px);
 }
+.collage-side{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+.collage-side .collage-bg{
+  display:none;
+}
+.collage-side .collage-img{
+  position:relative;
+  width:48%;
+  top:auto;left:auto;bottom:auto;right:auto;
+  transform:rotate(-2deg);
+}
+.collage-side .collage-img:nth-child(3){
+  transform:rotate(2deg);
+}
+.collage-side:hover .collage-img:nth-child(2){
+  transform:rotate(0deg) translateY(-4px);
+}
+.collage-side:hover .collage-img:nth-child(3){
+  transform:rotate(0deg) translateY(-4px);
+}
 .collage-frame{
   position:relative;
   padding:10px 10px 12px;
@@ -699,7 +723,7 @@ footer .fine{
       </figure>
       <figure class="g-item reveal d2">
         <div class="collage-frame">
-          <div class="collage-wrap">
+          <div class="collage-wrap collage-side">
             <img class="collage-bg" src="photos/couple-years-1.jpg" alt="" loading="lazy">
             <img class="collage-img" src="photos/couple-years-1.jpg" alt="Romel and Mary" loading="lazy">
             <img class="collage-img" src="photos/couple-years-2.jpg" alt="Romel and Mary" loading="lazy">
