@@ -357,11 +357,13 @@ h2.title{
 }
 .g-row-line{
   grid-column:1 / -1;
-  text-align:center;
-  color:var(--sage-warm);
-  font-size:1rem;
-  letter-spacing:.3em;
-  padding-bottom:14px;
+  display:flex;
+  justify-content:center;
+  padding:2px 0 16px;
+}
+.g-row-line svg{
+  width:min(400px,82vw);
+  height:auto;
 }
 .collage-wrap{
   position:relative;
@@ -786,7 +788,28 @@ footer .fine{
         <div class="g-frame"><img src="photos/couple-collage-2.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
       <div class="g-row-cap reveal d3">Where it began...</div>
-      <div class="g-row-line" aria-hidden="true">─ ❀&thinsp;❀&thinsp;❀&thinsp;❀&thinsp;❀ ─</div>
+      <div class="g-row-line" aria-hidden="true"><svg viewBox="0 0 480 44" fill="none">
+        <defs>
+          <linearGradient id="rl-g1" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#97a285" stop-opacity="0"/>
+            <stop offset=".38" stop-color="#97a285" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#b08948"/>
+          </linearGradient>
+          <linearGradient id="rr-g1" x1="1" y1="0" x2="0" y2="0">
+            <stop offset="0" stop-color="#97a285" stop-opacity="0"/>
+            <stop offset=".38" stop-color="#97a285" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#8a9574"/>
+          </linearGradient>
+        </defs>
+        <path d="M6 24 C44 10 82 37 121 23 C119.5 16.5 129.5 16.5 128 23 C148 14 162 31 179 22 C193 16 205 26 219 21" stroke="url(#rl-g1)" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M474 24 C436 10 398 37 359 23 C360.5 16.5 350.5 16.5 352 23 C332 14 318 31 301 22 C287 16 275 26 261 21" stroke="url(#rr-g1)" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="6" cy="24" r="1.6" fill="#97a285" opacity=".55"/>
+        <circle cx="474" cy="24" r="1.6" fill="#97a285" opacity=".55"/>
+        <circle cx="247" cy="22" r="9" stroke="#8a9574" stroke-width="1.8"/>
+        <circle cx="233" cy="22" r="9" stroke="#b08948" stroke-width="1.8"/>
+        <path d="M243.2 30.16 A9 9 0 0 1 238.03 21.22" stroke="#8a9574" stroke-width="1.8"/>
+        <path d="M240 3.4 L241.9 6 L240 8.6 L238.1 6 Z" fill="#d3b47e"/>
+      </svg></div>
       <figure class="g-item reveal d1">
         <div class="g-frame"><img src="photos/couple-years-1.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
@@ -794,7 +817,28 @@ footer .fine{
         <div class="g-frame"><img src="photos/couple-years-2.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
       <div class="g-row-cap reveal d3">Through the years...</div>
-      <div class="g-row-line" aria-hidden="true">─ ❀&thinsp;❀&thinsp;❀&thinsp;❀&thinsp;❀ ─</div>
+      <div class="g-row-line" aria-hidden="true"><svg viewBox="0 0 480 44" fill="none">
+        <defs>
+          <linearGradient id="rl-g2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#97a285" stop-opacity="0"/>
+            <stop offset=".38" stop-color="#97a285" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#b08948"/>
+          </linearGradient>
+          <linearGradient id="rr-g2" x1="1" y1="0" x2="0" y2="0">
+            <stop offset="0" stop-color="#97a285" stop-opacity="0"/>
+            <stop offset=".38" stop-color="#97a285" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#8a9574"/>
+          </linearGradient>
+        </defs>
+        <path d="M6 24 C44 10 82 37 121 23 C119.5 16.5 129.5 16.5 128 23 C148 14 162 31 179 22 C193 16 205 26 219 21" stroke="url(#rl-g2)" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M474 24 C436 10 398 37 359 23 C360.5 16.5 350.5 16.5 352 23 C332 14 318 31 301 22 C287 16 275 26 261 21" stroke="url(#rr-g2)" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="6" cy="24" r="1.6" fill="#97a285" opacity=".55"/>
+        <circle cx="474" cy="24" r="1.6" fill="#97a285" opacity=".55"/>
+        <circle cx="247" cy="22" r="9" stroke="#8a9574" stroke-width="1.8"/>
+        <circle cx="233" cy="22" r="9" stroke="#b08948" stroke-width="1.8"/>
+        <path d="M243.2 30.16 A9 9 0 0 1 238.03 21.22" stroke="#8a9574" stroke-width="1.8"/>
+        <path d="M240 3.4 L241.9 6 L240 8.6 L238.1 6 Z" fill="#d3b47e"/>
+      </svg></div>
       <figure class="g-item reveal d1">
         <div class="g-frame"><img src="photos/couple-3.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
@@ -802,7 +846,28 @@ footer .fine{
         <div class="g-frame"><img src="photos/couple-1.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
       <div class="g-row-cap reveal d3">Always us...</div>
-      <div class="g-row-line" aria-hidden="true">─ ❀&thinsp;❀&thinsp;❀&thinsp;❀&thinsp;❀ ─</div>
+      <div class="g-row-line" aria-hidden="true"><svg viewBox="0 0 480 44" fill="none">
+        <defs>
+          <linearGradient id="rl-g3" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#97a285" stop-opacity="0"/>
+            <stop offset=".38" stop-color="#97a285" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#b08948"/>
+          </linearGradient>
+          <linearGradient id="rr-g3" x1="1" y1="0" x2="0" y2="0">
+            <stop offset="0" stop-color="#97a285" stop-opacity="0"/>
+            <stop offset=".38" stop-color="#97a285" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#8a9574"/>
+          </linearGradient>
+        </defs>
+        <path d="M6 24 C44 10 82 37 121 23 C119.5 16.5 129.5 16.5 128 23 C148 14 162 31 179 22 C193 16 205 26 219 21" stroke="url(#rl-g3)" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M474 24 C436 10 398 37 359 23 C360.5 16.5 350.5 16.5 352 23 C332 14 318 31 301 22 C287 16 275 26 261 21" stroke="url(#rr-g3)" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="6" cy="24" r="1.6" fill="#97a285" opacity=".55"/>
+        <circle cx="474" cy="24" r="1.6" fill="#97a285" opacity=".55"/>
+        <circle cx="247" cy="22" r="9" stroke="#8a9574" stroke-width="1.8"/>
+        <circle cx="233" cy="22" r="9" stroke="#b08948" stroke-width="1.8"/>
+        <path d="M243.2 30.16 A9 9 0 0 1 238.03 21.22" stroke="#8a9574" stroke-width="1.8"/>
+        <path d="M240 3.4 L241.9 6 L240 8.6 L238.1 6 Z" fill="#d3b47e"/>
+      </svg></div>
       <figure class="g-item reveal d1">
         <div class="g-frame"><img src="photos/couple-4.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
@@ -810,7 +875,28 @@ footer .fine{
         <div class="g-frame"><img src="photos/couple-2.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
       <div class="g-row-cap reveal d3">To forever <span style="font-size:.5em">❤️❤️❤️</span></div>
-      <div class="g-row-line" aria-hidden="true">─ ❀&thinsp;❀&thinsp;❀&thinsp;❀&thinsp;❀ ─</div>
+      <div class="g-row-line" aria-hidden="true"><svg viewBox="0 0 480 44" fill="none">
+        <defs>
+          <linearGradient id="rl-g4" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#97a285" stop-opacity="0"/>
+            <stop offset=".38" stop-color="#97a285" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#b08948"/>
+          </linearGradient>
+          <linearGradient id="rr-g4" x1="1" y1="0" x2="0" y2="0">
+            <stop offset="0" stop-color="#97a285" stop-opacity="0"/>
+            <stop offset=".38" stop-color="#97a285" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#8a9574"/>
+          </linearGradient>
+        </defs>
+        <path d="M6 24 C44 10 82 37 121 23 C119.5 16.5 129.5 16.5 128 23 C148 14 162 31 179 22 C193 16 205 26 219 21" stroke="url(#rl-g4)" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M474 24 C436 10 398 37 359 23 C360.5 16.5 350.5 16.5 352 23 C332 14 318 31 301 22 C287 16 275 26 261 21" stroke="url(#rr-g4)" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="6" cy="24" r="1.6" fill="#97a285" opacity=".55"/>
+        <circle cx="474" cy="24" r="1.6" fill="#97a285" opacity=".55"/>
+        <circle cx="247" cy="22" r="9" stroke="#8a9574" stroke-width="1.8"/>
+        <circle cx="233" cy="22" r="9" stroke="#b08948" stroke-width="1.8"/>
+        <path d="M243.2 30.16 A9 9 0 0 1 238.03 21.22" stroke="#8a9574" stroke-width="1.8"/>
+        <path d="M240 3.4 L241.9 6 L240 8.6 L238.1 6 Z" fill="#d3b47e"/>
+      </svg></div>
     </div>
   </div>
 </section>
