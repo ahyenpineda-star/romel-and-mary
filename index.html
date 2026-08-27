@@ -351,33 +351,30 @@ h2.title{
 }
 .collage-wrap{
   position:relative;
-  max-width:320px;
-  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  padding:20px 10px;
 }
-.collage-wrap .collage-bg{
-  position:absolute;
-  top:12px;left:12px;
-  width:82%;
-  height:auto;
-  border-radius:160px 160px 6px 6px;
-  filter:sepia(.2) saturate(.9) brightness(1.03);
-  box-shadow:0 18px 40px -12px rgba(66,53,42,.45);
-  z-index:1;
-  transform:rotate(-3deg);
-}
-.collage-wrap .collage-fg{
-  position:relative;
-  width:100%;
+.collage-wrap .collage-img{
+  width:48%;
   height:auto;
   border-radius:160px 160px 6px 6px;
   filter:sepia(.24) saturate(.9) brightness(1.03);
   box-shadow:0 32px 64px -34px rgba(66,53,42,.5), 0 0 24px rgba(125,138,106,.08);
-  z-index:2;
-  transform:rotate(2deg);
   transition:filter .9s ease, transform .9s ease;
 }
-.collage-wrap:hover .collage-fg{filter:none;transform:rotate(0deg) scale(1.035)}
-.collage-wrap:hover .collage-bg{filter:none;transform:rotate(0deg) scale(0.98)}
+.collage-wrap .collage-img:nth-child(1){
+  transform:rotate(-3deg);
+}
+.collage-wrap .collage-img:nth-child(2){
+  transform:rotate(3deg);
+}
+.collage-wrap:hover .collage-img{
+  filter:none;
+  transform:rotate(0deg) scale(1.05);
+}
 .collage-frame{
   padding:10px 10px 12px;
   background:linear-gradient(180deg,#fffdf7,rgba(138,149,116,.03));
@@ -668,8 +665,8 @@ footer .fine{
       <figure class="g-item reveal d1">
         <div class="collage-frame">
           <div class="collage-wrap">
-            <img class="collage-bg" src="photos/couple-collage-1.jpg" alt="Romel and Mary" loading="lazy">
-            <img class="collage-fg" src="photos/couple-collage-2.jpg" alt="Romel and Mary" loading="lazy">
+            <img class="collage-img" src="photos/couple-collage-1.jpg" alt="Romel and Mary" loading="lazy">
+            <img class="collage-img" src="photos/couple-collage-2.jpg" alt="Romel and Mary" loading="lazy">
           </div>
         </div>
         <figcaption class="g-cap script">where it began</figcaption>
