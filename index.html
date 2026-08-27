@@ -347,8 +347,13 @@ h2.title{
   transition:filter .9s ease,transform .9s ease;
 }
 .g-item:hover img{filter:none;transform:scale(1.035)}
-.g-cap{
-  margin-top:16px;text-align:center;font-size:1.5rem;color:var(--terra);
+.g-row-cap{
+  grid-column:1 / -1;
+  text-align:center;
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(1.8rem,4vw,2.5rem);
+  color:var(--terra);
+  padding:8px 0 12px;
 }
 .collage-wrap{
   position:relative;
@@ -768,32 +773,32 @@ footer .fine{
     <div class="gallery">
       <figure class="g-item reveal d1">
         <div class="g-frame"><img src="photos/couple-collage-1.jpg" alt="Romel and Mary" loading="lazy"></div>
-        <figcaption class="g-cap script">where it began</figcaption>
       </figure>
       <figure class="g-item reveal d2">
         <div class="g-frame"><img src="photos/couple-collage-2.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
-      <figure class="g-item reveal d3">
+      <div class="g-row-cap reveal d3">where it began</div>
+      <figure class="g-item reveal d1">
         <div class="g-frame"><img src="photos/couple-years-1.jpg" alt="Romel and Mary" loading="lazy"></div>
-        <figcaption class="g-cap script">through the years</figcaption>
       </figure>
-      <figure class="g-item reveal d4">
+      <figure class="g-item reveal d2">
         <div class="g-frame"><img src="photos/couple-years-2.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
+      <div class="g-row-cap reveal d3">through the years</div>
       <figure class="g-item reveal d1">
         <div class="g-frame"><img src="photos/couple-3.jpg" alt="Romel and Mary" loading="lazy"></div>
-        <figcaption class="g-cap script">always us</figcaption>
       </figure>
       <figure class="g-item reveal d2">
         <div class="g-frame"><img src="photos/couple-1.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
-      <figure class="g-item reveal d3">
+      <div class="g-row-cap reveal d3">always us</div>
+      <figure class="g-item reveal d1">
         <div class="g-frame"><img src="photos/couple-4.jpg" alt="Romel and Mary" loading="lazy"></div>
-        <figcaption class="g-cap script">to forever</figcaption>
       </figure>
-      <figure class="g-item reveal d4">
+      <figure class="g-item reveal d2">
         <div class="g-frame"><img src="photos/couple-2.jpg" alt="Romel and Mary" loading="lazy"></div>
       </figure>
+      <div class="g-row-cap reveal d3">to forever</div>
     </div>
   </div>
 </section>
