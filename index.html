@@ -386,14 +386,15 @@ h2.title{
 .collage-frame{
   position:relative;
   padding:10px 10px 12px;
-  background:linear-gradient(180deg,#fffdf7,rgba(138,149,116,.03));
+  background:linear-gradient(180deg,rgba(125,138,106,.15),rgba(138,149,116,.08),rgba(151,162,133,.12));
   border:1px solid var(--sage-soft);
   border-radius:170px 170px 10px 10px;
-  box-shadow:0 32px 64px -34px rgba(66,53,42,.5), 0 0 24px rgba(125,138,106,.08);
+  box-shadow:0 32px 64px -34px rgba(66,53,42,.5), 0 0 24px rgba(125,138,106,.12);
 }
 .collage-frame::before{
   content:"";position:absolute;inset:-9px;z-index:-1;
-  border:1px solid rgba(125,138,106,.24);border-radius:180px 180px 14px 14px;
+  border:1px solid rgba(125,138,106,.3);border-radius:180px 180px 14px 14px;
+  background:rgba(125,138,106,.05);
 }
 .head-duo{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
