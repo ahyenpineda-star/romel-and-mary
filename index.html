@@ -354,34 +354,35 @@ h2.title{
   width:100%;
   aspect-ratio:3/4;
   overflow:hidden;
+  border-radius:160px 160px 6px 6px;
 }
 .collage-wrap .collage-img{
   position:absolute;
+  top:0;left:0;
   width:100%;
   height:100%;
   object-fit:cover;
-  border-radius:160px 160px 6px 6px;
   filter:sepia(.24) saturate(.9) brightness(1.03);
   transition:filter .9s ease, transform .9s ease;
 }
 .collage-wrap .collage-img:nth-child(1){
-  clip-path:inset(0 35% 0 0);
-  transform:rotate(-2deg) scale(1.1);
+  clip-path:polygon(0 0, 60% 0, 45% 100%, 0 100%);
+  transform:rotate(-1deg);
   z-index:1;
 }
 .collage-wrap .collage-img:nth-child(2){
-  clip-path:inset(0 0 0 30%);
-  transform:rotate(2deg) scale(1.1);
+  clip-path:polygon(40% 0, 100% 0, 100% 100%, 55% 100%);
+  transform:rotate(1deg);
   z-index:2;
 }
 .collage-wrap:hover .collage-img{
   filter:none;
 }
 .collage-wrap:hover .collage-img:nth-child(1){
-  transform:rotate(-1deg) scale(1.12);
+  transform:rotate(0deg);
 }
 .collage-wrap:hover .collage-img:nth-child(2){
-  transform:rotate(1deg) scale(1.12);
+  transform:rotate(0deg);
 }
 .collage-frame{
   position:relative;
