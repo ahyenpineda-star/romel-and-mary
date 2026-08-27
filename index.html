@@ -365,6 +365,27 @@ h2.title{
   width:min(400px,82vw);
   height:auto;
 }
+.gallery-bells{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:1;
+}
+.bell-petal{
+  position:absolute;
+  top:-9vh;
+  will-change:transform;
+  animation:fall linear infinite, sway ease-in-out infinite alternate;
+  opacity:.85;
+  filter:
+    drop-shadow(0 0 5px rgba(212,175,55,.65))
+    drop-shadow(0 0 14px rgba(212,175,55,.35));
+}
+.bell-petal svg{
+  width:100%;
+  height:auto;
+}
 .collage-wrap{
   position:relative;
   width:100%;
@@ -776,8 +797,8 @@ footer .fine{
   </div>
 </section>
 
-<section class="block center" id="gallery" style="background:linear-gradient(180deg,rgba(138,149,116,.07),rgba(151,162,133,.05),rgba(138,149,116,.07))">
-  <div class="wrap">
+<section class="block center" id="gallery" style="background:linear-gradient(180deg,rgba(138,149,116,.07),rgba(151,162,133,.05),rgba(138,149,116,.07));overflow:hidden">
+  <div class="wrap" style="position:relative;z-index:2">
     <span class="numeral reveal">III · Captured Moments</span>
     <h2 class="title script reveal d1" style="font-weight:400">Our love in frames</h2>
     <div class="gallery">
@@ -1179,6 +1200,23 @@ for(let i=0;i<16;i++){
   p.style.animationDuration = (9 + Math.random()*10) + 's, ' + (2.5 + Math.random()*2.5) + 's';
   p.style.animationDelay = (-Math.random()*18) + 's, ' + (-Math.random()*3) + 's';
   petalsBox.appendChild(p);
+}
+
+const gallerySec = document.getElementById('gallery');
+const bellsBox = document.createElement('div');
+bellsBox.className = 'gallery-bells';
+gallerySec.appendChild(bellsBox);
+const bellSvg = '<svg viewBox="0 0 100 140"><path d="M50 10 C30 10 15 30 15 60 C15 90 35 120 50 130 C65 120 85 90 85 60 C85 30 70 10 50 10Z" fill="#d4af37"/><path d="M50 14 C42 14 28 28 28 56 C28 80 42 108 50 124" stroke="#b8960c" stroke-width="3" fill="none" opacity=".8"/><path d="M50 14 C58 14 72 28 72 56 C72 80 58 108 50 124" stroke="#b8960c" stroke-width="3" fill="none" opacity=".8"/><ellipse cx="50" cy="128" rx="9" ry="5.5" fill="#2d5a3d"/></svg>';
+for(let i=0;i<18;i++){
+  const b = document.createElement('span');
+  b.className = 'bell-petal';
+  const s = 11 + Math.random()*17;
+  b.style.left = Math.random()*100 + '%';
+  b.style.width = s + 'px';
+  b.style.animationDuration = (9 + Math.random()*11) + 's, ' + (2.4 + Math.random()*2.8) + 's';
+  b.style.animationDelay = (-Math.random()*24) + 's, ' + (-Math.random()*3) + 's';
+  b.innerHTML = bellSvg;
+  bellsBox.appendChild(b);
 }
 
 const toggle = document.getElementById('musicToggle');
