@@ -352,58 +352,65 @@ h2.title{
 .collage-wrap{
   position:relative;
   width:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:24px 16px 20px;
-  min-height:320px;
+  aspect-ratio:3/4;
+  overflow:hidden;
+  border-radius:160px 160px 6px 6px;
+}
+.collage-wrap .collage-bg{
+  position:absolute;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:blur(20px) saturate(.8) brightness(1.1);
+  transform:scale(1.2);
+  z-index:0;
 }
 .collage-wrap .collage-img{
-  width:48%;
-  aspect-ratio:3/4;
+  position:absolute;
+  height:auto;
   object-fit:cover;
   border-radius:4px;
   filter:sepia(.18) saturate(.92) brightness(1.02);
-  transition:filter .8s ease, transform .8s ease, box-shadow .8s ease;
-  box-shadow:0 12px 32px -8px rgba(66,53,42,.4), 0 4px 12px rgba(66,53,42,.2);
-  background:#fffdf7;
-  padding:6px 6px 24px 6px;
-}
-.collage-wrap .collage-img:nth-child(1){
-  transform:rotate(-5deg) translateX(8px);
-  z-index:1;
+  transition:filter .8s ease, transform .8s ease;
+  box-shadow:0 10px 28px -6px rgba(66,53,42,.5);
+  background:rgba(255,253,247,.85);
+  padding:5px 5px 18px 5px;
 }
 .collage-wrap .collage-img:nth-child(2){
-  transform:rotate(5deg) translateX(-8px);
+  width:46%;
+  top:14%;
+  left:6%;
+  transform:rotate(-6deg);
+  z-index:1;
+}
+.collage-wrap .collage-img:nth-child(3){
+  width:48%;
+  bottom:12%;
+  right:6%;
+  transform:rotate(4deg);
   z-index:2;
 }
 .collage-wrap:hover .collage-img{
   filter:none;
 }
-.collage-wrap:hover .collage-img:nth-child(1){
-  transform:rotate(-2deg) translateX(12px) translateY(-4px);
-  box-shadow:0 20px 44px -10px rgba(66,53,42,.5), 0 6px 16px rgba(66,53,42,.25);
-}
 .collage-wrap:hover .collage-img:nth-child(2){
-  transform:rotate(2deg) translateX(-12px) translateY(-4px);
-  box-shadow:0 20px 44px -10px rgba(66,53,42,.5), 0 6px 16px rgba(66,53,42,.25);
+  transform:rotate(-3deg) translateY(-4px);
+}
+.collage-wrap:hover .collage-img:nth-child(3){
+  transform:rotate(2deg) translateY(-4px);
 }
 .collage-frame{
   position:relative;
-  padding:6px;
-  background:linear-gradient(145deg,rgba(255,253,247,.95),rgba(233,220,196,.5),rgba(248,242,231,.8));
-  border:1px solid rgba(176,137,72,.3);
-  border-radius:6px;
-  box-shadow:0 28px 60px -24px rgba(66,53,42,.45), 0 0 24px rgba(125,138,106,.06);
+  padding:10px 10px 12px;
+  background:linear-gradient(180deg,#fffdf7,rgba(138,149,116,.03));
+  border:1px solid var(--sage-soft);
+  border-radius:170px 170px 10px 10px;
+  box-shadow:0 32px 64px -34px rgba(66,53,42,.5), 0 0 24px rgba(125,138,106,.08);
 }
 .collage-frame::before{
-  content:"";position:absolute;inset:4px;
-  border:1px solid rgba(176,137,72,.2);border-radius:4px;pointer-events:none;
-}
-.collage-frame::after{
-  content:"";position:absolute;top:0;left:15%;right:15%;height:1px;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
-  opacity:.6;
+  content:"";position:absolute;inset:-9px;z-index:-1;
+  border:1px solid rgba(125,138,106,.24);border-radius:180px 180px 14px 14px;
 }
 .head-duo{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -683,6 +690,7 @@ footer .fine{
       <figure class="g-item reveal d1">
         <div class="collage-frame">
           <div class="collage-wrap">
+            <img class="collage-bg" src="photos/couple-collage-1.jpg" alt="" loading="lazy">
             <img class="collage-img" src="photos/couple-collage-1.jpg" alt="Romel and Mary" loading="lazy">
             <img class="collage-img" src="photos/couple-collage-2.jpg" alt="Romel and Mary" loading="lazy">
           </div>
@@ -692,6 +700,7 @@ footer .fine{
       <figure class="g-item reveal d2">
         <div class="collage-frame">
           <div class="collage-wrap">
+            <img class="collage-bg" src="photos/couple-years-1.jpg" alt="" loading="lazy">
             <img class="collage-img" src="photos/couple-years-1.jpg" alt="Romel and Mary" loading="lazy">
             <img class="collage-img" src="photos/couple-years-2.jpg" alt="Romel and Mary" loading="lazy">
           </div>
