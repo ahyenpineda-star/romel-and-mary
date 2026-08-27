@@ -452,18 +452,20 @@ h2.title{
   transition:filter .8s ease, transform .8s ease;
 }
 .collage-side .collage-img:nth-child(2){
-  width:62%;
-  left:-10%;
-  clip-path:polygon(0 0, 100% 0, calc(100% - 8%) 100%, 0 100%);
-  mask-image:linear-gradient(to right, black 82%, transparent 100%);
-  -webkit-mask-image:linear-gradient(to right, black 82%, transparent 100%);
+  width:100%;
+  top:0;left:0;
+  height:72%;
+  clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  mask-image:linear-gradient(to bottom, black 88%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom, black 88%, transparent 100%);
 }
 .collage-side .collage-img:nth-child(3){
-  width:62%;
-  right:-10%;
-  clip-path:polygon(0 0, 100% 0, 100% 100%, 8% 100%);
-  mask-image:linear-gradient(to left, black 82%, transparent 100%);
-  -webkit-mask-image:linear-gradient(to left, black 82%, transparent 100%);
+  width:100%;
+  bottom:0;right:0;
+  height:72%;
+  clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  mask-image:linear-gradient(to top, black 88%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to top, black 88%, transparent 100%);
 }
 .collage-side:hover .collage-img{
   filter:none;
