@@ -399,7 +399,7 @@ h2.title{
 .collage-side{
   position:relative;
   width:100%;
-  aspect-ratio:16/9;
+  aspect-ratio:3/4;
   overflow:hidden;
   border-radius:160px 160px 6px 6px;
 }
@@ -417,6 +417,7 @@ h2.title{
   position:absolute;
   top:0;
   height:100%;
+  width:100%;
   object-fit:cover;
   transform:rotate(0deg);
   z-index:1;
@@ -425,18 +426,18 @@ h2.title{
   transition:filter .8s ease, transform .8s ease;
 }
 .collage-side .collage-img:nth-child(2){
-  left:0;
-  width:60%;
-  clip-path:polygon(0 0, 100% 0, calc(100% - 8%) 100%, 0 100%);
-  mask-image:linear-gradient(to right, black 85%, transparent 100%);
-  -webkit-mask-image:linear-gradient(to right, black 85%, transparent 100%);
+  width:65%;
+  left:-5%;
+  clip-path:polygon(0 0, 100% 0, 70% 100%, 0 100%);
+  mask-image:linear-gradient(to right, black 70%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to right, black 70%, transparent 100%);
 }
 .collage-side .collage-img:nth-child(3){
-  right:0;
-  width:65%;
-  clip-path:polygon(0 0, 100% 0, 100% 100%, 8% 100%);
-  mask-image:linear-gradient(to left, black 85%, transparent 100%);
-  -webkit-mask-image:linear-gradient(to left, black 85%, transparent 100%);
+  width:70%;
+  right:-5%;
+  clip-path:polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  mask-image:linear-gradient(to left, black 70%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to left, black 70%, transparent 100%);
 }
 .collage-side:hover .collage-img{
   filter:none;
@@ -449,7 +450,6 @@ h2.title{
 }
 .collage-frame{
   position:relative;
-  aspect-ratio:16/10;
   padding:10px 10px 12px;
   background:linear-gradient(180deg,#fffdf7,rgba(138,149,116,.03));
   border:1px solid var(--sage-soft);
