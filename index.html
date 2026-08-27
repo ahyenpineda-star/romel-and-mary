@@ -426,13 +426,17 @@ h2.title{
 }
 .collage-side .collage-img:nth-child(2){
   left:0;
-  width:55%;
-  clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  width:60%;
+  clip-path:polygon(0 0, 100% 0, calc(100% - 8%) 100%, 0 100%);
+  mask-image:linear-gradient(to right, black 85%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to right, black 85%, transparent 100%);
 }
 .collage-side .collage-img:nth-child(3){
   right:0;
-  width:60%;
-  clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  width:65%;
+  clip-path:polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+  mask-image:linear-gradient(to left, black 85%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to left, black 85%, transparent 100%);
 }
 .collage-side:hover .collage-img{
   filter:none;
