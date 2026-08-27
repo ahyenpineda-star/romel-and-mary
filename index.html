@@ -1202,23 +1202,6 @@ for(let i=0;i<16;i++){
   petalsBox.appendChild(p);
 }
 
-const gallerySec = document.getElementById('gallery');
-const bellsBox = document.createElement('div');
-bellsBox.className = 'gallery-bells';
-gallerySec.appendChild(bellsBox);
-const bellSvg = '<svg viewBox="0 0 100 140"><path d="M50 10 C30 10 15 30 15 60 C15 90 35 120 50 130 C65 120 85 90 85 60 C85 30 70 10 50 10Z" fill="#d4af37"/><path d="M50 14 C42 14 28 28 28 56 C28 80 42 108 50 124" stroke="#b8960c" stroke-width="3" fill="none" opacity=".8"/><path d="M50 14 C58 14 72 28 72 56 C72 80 58 108 50 124" stroke="#b8960c" stroke-width="3" fill="none" opacity=".8"/><ellipse cx="50" cy="128" rx="9" ry="5.5" fill="#2d5a3d"/></svg>';
-for(let i=0;i<18;i++){
-  const b = document.createElement('span');
-  b.className = 'bell-petal';
-  const s = 11 + Math.random()*17;
-  b.style.left = Math.random()*100 + '%';
-  b.style.width = s + 'px';
-  b.style.animationDuration = (9 + Math.random()*11) + 's, ' + (2.4 + Math.random()*2.8) + 's';
-  b.style.animationDelay = (-Math.random()*24) + 's, ' + (-Math.random()*3) + 's';
-  b.innerHTML = bellSvg;
-  bellsBox.appendChild(b);
-}
-
 const toggle = document.getElementById('musicToggle');
 let ytPlayer = null;
 let ytReady = false;
